@@ -1,0 +1,66 @@
+<script type="text/javascript" src="jquery.min.js"></script>
+<script src="highcharts.js"></script>
+<link rel="stylesheet" href="materialize.min.css">
+<script src="materialize.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Aquarium Control</title>
+<head>
+    <link href="nouislider.css" rel="stylesheet">
+    <script src="nouislider.js"></script>
+    <link rel='stylesheet' type= "text/css" href="chart.css"></link>
+</head>
+
+<body>
+    <div>
+        <div class="row">
+            <div class="col s12 m10 offset-m1 l6 push-l6">
+                <div id="lighting_preview" style="height: 300px; max-width: 600px; margin: 0 auto"></div>
+            </div>
+            <div class='col s12 m10 offset-m1 l6 pull-l6'>
+                <div class="card">
+                    <div class="card-tabs">
+                        <ul class='tabs tabs-fixed-width'>
+                            <li class="tab"><a href="#whites">Whites</a></li>
+                            <li class="tab"><a href="#RGB">RGB</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-content">
+                        <div id="whites">
+                            <div class='row'>
+                                <div class='input-field col s4'>
+                                    <select class='white-color'>
+                                        <option value="ww">warm white</option>
+                                        <option value="cw">cold white</option>
+                                    </select>
+                                    <label>Color</label>
+                                </div>
+                                <div class='col s2 offset-s1'>
+                                    <a class='waves-effect waves-light btn-small red' id="restore">restore</a>
+                                </div> 
+                                <div class='col s2 offset-s2'>
+                                    <a class='waves-effect waves-light btn' id="send">store</a>
+                                </div> 
+                                <div class='col s12'><h5>Time</h5></div>
+                                <div class='col s12'><div id="hour-slider"></div></div>
+                                <div class='col s12'><h5 id='pwr-text'>Power: </h5></div>
+                                <div class='col s12'><div id="power-slider"></div></div>
+                                <div class='col s12'><h5 id='flr-text'>Floor: </h5></div>
+                                <div class='col s12'><div id="limit-slider"></div></div>
+                            </div>
+                        </div>
+                        <div id="RGB">
+                            <p>well, ainda n sei oq fazer aqui, então segura as ponta aí</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+        </div>
+    </div>
+</body>
+
+<script src="initialize.js"></script>
+<script src='chart.js'></script>

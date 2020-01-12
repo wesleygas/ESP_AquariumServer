@@ -1,0 +1,27 @@
+#lighting_preview {
+  height: 300px;
+  min-width: 310px;
+  max-width: 800px;
+}
+.small-chart .highcharts-subtitle {
+  display: none;
+}
+.small-chart .highcharts-legend {
+  display: none;
+}
+
+.whites-slider{
+  background: #d6b85c;
+}
+
+.noUi-target{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.noUi-tooltip {
+  display: none;
+}
+.noUi-active .noUi-tooltip {
+  display: block;
+}
