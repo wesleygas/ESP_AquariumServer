@@ -15,8 +15,12 @@ NTPtime NTPch(NTP_SERVER);
 
 #define color_number 2
 
+#define MANUAL_TIMEOUT 5000
+
 int color_pins[color_number] = {D5, D6};
+
 char color_names[color_number][3] = {"ww", "cw"};
+
 LightData color_params[color_number];
 int manualBrightness[color_number];
 
@@ -169,7 +173,7 @@ void setManualLightValues(){
     manualBrightness[1] = lightPack.value.cw;
     manualBrightness[0] = lightPack.value.ww;
     isManual = true;
-    manualExpiresAt = millis() + 5000;
+    manualExpiresAt = millis() + MANUAL_TIMEOUT;
   }
   for(int i = 0; i < color_number; i++){
     analogWrite(color_pins[i], manualBrightness[i]);
